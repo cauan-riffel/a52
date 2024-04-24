@@ -1,0 +1,40 @@
+.names{
+	overflow-y: auto;
+
+	flex-direction: column;
+
+
+	width: 37%;
+	min-height: 250px;
+	max-height: 500px;
+	margin: 5px 10px;
+
+
+
+	border: solid black 0.8px;
+
+
+
+}
+
+.names p{
+	overflow-wrap: break-word;
+	margin-bottom: 0.5px;
+	padding: 6.5px 4px 6.5px 4px;
+
+	background-color: whitesmoke;
+	border-bottom: 0.8px solid rgb(190, 190, 190);
+	user-select: none;
+}
+
+.names p:nth-child(even){
+	background-color: white;
+}
+
+.names p:hover{
+	cursor: pointer;
+}
+
+.names p.selected{
+	background-color: blue;
+}

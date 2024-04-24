@@ -1,0 +1,25 @@
+.btnList{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-direction: column;
+
+	flex-basis: 75px;
+
+}
+
+.btnList>.btn{
+	width: 35px;
+	height: 35px;
+
+	border: 1.5px solid black;
+	border-radius: 8px;
+
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.btnList>.btn.btn:hoover{
+	cursor: pointer;
+}
