@@ -9,7 +9,7 @@
 
 }
 
-.btnList>.btn{
+.btnList .btn{
 	width: 35px;
 	height: 35px;
 
@@ -20,6 +20,6 @@
 	margin-bottom: 12px;
 }
 
-.btnList>.btn.btn:hoover{
+.btnList .btn:hoover{
 	cursor: pointer;
 }

@@ -10,8 +10,14 @@ import { isIn } from './utils/Names';
 
 
 const App=()=>{
-	const [leftNames, changeLeftNames]=useState(["Cláudio da Rosa Soares Cabral","Cláudio da Rosa Soares Cabral","Cláudio de Paula","Algum nome Aleatório","Cleitinho da Silva Nascimento"]);
-	const [rightNames, changeRightNames]=useState([]);
+	const [namesList,changeNames]=useState({
+		"ad1":{
+			names:["Cláudio da Rosa Soares Cabral","Cláudio da Rosa Soares Cabral","Cláudio de Paula","Algum nome Aleatório","Cleitinho da Silva Nascimento"]
+		},
+		"ad2":{
+			names:[]
+		}
+	});
 	let [index, _ci]=useState({indexes:[],id:0});
 
 	const changeIndex=(shiftKey,ctrlKey,_index,id)=>{
@@ -45,7 +51,7 @@ const App=()=>{
 	}
 
 	const sendAllLeft=()=>{
-
+		console.log("all left")
 	},sendAllRight=()=>{
 
 	},sendLeft=()=>{
@@ -54,13 +60,11 @@ const App=()=>{
 
 	};
 
-
-	console.log(index);
   return (
     <div className="App">
-			<Names names={leftNames} indexes={index} change={changeIndex} id={0}/>
-			<Button sendAllLeft={sendAllLeft} sendAllRight={sendAllRight} sendLeft={sendLeft} sendRight={sendRight}/>
-			<Names names={rightNames} indexes={index} change={changeIndex} id={1}/>
+			<Names listNames={namesList["ad1"].names} indexes={index} change={changeIndex} id={"ad1"}/>
+			<Button left={namesList["ad1"]} right={namesList["ad2"]} sendAllLeft={sendAllLeft} sendAllRight={sendAllRight} sendLeft={sendLeft} sendRight={sendRight}/>
+			<Names listNames={namesList["ad2"].names} indexes={index} change={changeIndex} id={"ad2"}/>
     </div>
   );
 }
