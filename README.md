@@ -1,1 +1,1 @@
-# projetinho para mover uma lista de nomes entre 2 listas diferentes
+# Projetinho para mover uma lista de nomes entre 2 listas diferentes
