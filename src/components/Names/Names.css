@@ -22,7 +22,7 @@
 	margin-bottom: 0.5px;
 	padding: 6.5px 4px 6.5px 4px;
 
-	background-color: whitesmoke;
+	background-color: rgb(200, 200, 200);
 	border-bottom: 0.8px solid rgb(190, 190, 190);
 	user-select: none;
 }
@@ -36,5 +36,5 @@
 }
 
 .names p.selected{
-	background-color: blue;
+	background-color: rgb(185, 237, 255);
 }
