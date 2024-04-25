@@ -9,3 +9,6 @@ Após isso será nescessário substituir a pasta src e public pelas respectivas 
 cd app
 npm run start
 ```
+
+## Como utilizar:
+Para utilizar é simples, selecione os nomes da lista que você deseja e clique em um dos botões centrais, vale a pena resaltar que ao utilizar as teclas shift e ctrl o programa irá se comportar semelhantemente a como o explorador de arquivos se comporta perante estas teclas.
