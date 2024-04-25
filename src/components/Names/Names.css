@@ -1,29 +1,19 @@
 .names{
 	overflow-y: auto;
-
 	flex-direction: column;
-
-
-	width: 37%;
+	width: 40%;
 	min-height: 250px;
 	max-height: 500px;
 	margin: 5px 10px;
-
-
-
 	border: solid black 0.8px;
-
-
-
 }
 
 .names p{
 	overflow-wrap: break-word;
-	margin-bottom: 0.5px;
+	/*margin-bottom: 0.4px;*/
 	padding: 6.5px 4px 6.5px 4px;
-
 	background-color: rgb(200, 200, 200);
-	border-bottom: 0.8px solid rgb(190, 190, 190);
+	border-bottom: 0.8px solid rgb(188, 190, 190);
 	user-select: none;
 }
 
@@ -37,4 +27,8 @@
 
 .names p.selected{
 	background-color: rgb(185, 237, 255);
+}
+
+.names p.selected:nth-child(even){
+	background-color: rgb(161, 213, 255);
 }

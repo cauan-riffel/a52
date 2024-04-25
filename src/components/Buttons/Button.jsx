@@ -1,24 +1,25 @@
 import "./Button.css";
 
 
+import { propExist } from "../../utils";
+
+
 const Button=(props)=>{
+	if(!(propExist(props,"left","Button")||propExist(props,"left","Button")))return;
+
 	const btnList=[];
 
 	if(props.sendAllRight !== undefined){
-		console.log(props.sendAllRight)
-		btnList.push(<input key={0} type="button" onClick={()=>props.sendAllRight()} className="btn" value=">>"/>)
+		btnList.push(<input key={0} type="button" onClick={()=>props.sendAllRight(props.left,props.right)} className="btn" value=">>"/>)
 	}
 	if(props.sendRight !== undefined){
-		console.log(props.sendRight)
-		btnList.push(<input key={1} type="button" onClick={()=>props.sendRight()} className="btn" value=">"/>)
+		btnList.push(<input key={1} type="button" onClick={()=>props.sendRight(props.left,props.right)} className="btn" value=">"/>)
 	}
 	if(props.sendLeft !== undefined){
-		console.log(props.sendLeft)
-		btnList.push(<input key={2} type="button" onClick={()=>props.sendLeft()} className="btn" value="<"/>)
+		btnList.push(<input key={2} type="button" onClick={()=>props.sendLeft(props.left,props.right)} className="btn" value="<"/>)
 	}
 	if(props.sendAllLeft !== undefined){
-		console.log(props.sendAllLeft)
-		btnList.push(<input key={3} type="button" onClick={()=>props.sendAllLeft()} className="btn" value="<<"/>)
+		btnList.push(<input key={3} type="button" onClick={()=>props.sendAllLeft(props.left,props.right)} className="btn" value="<<"/>)
 	}
 
 	return (<div className="btnList">

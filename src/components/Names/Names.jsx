@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./Names.css";
 import { isIn } from "../../utils/Names";
 import { propExist } from "../../utils";
@@ -13,7 +11,7 @@ const Names=(props)=>{
 	const names=[];
 
 	for(let x=0;x<props.listNames.length;x++){
-		if(isIn(props.indexes,x)){
+		if(isIn(props.indexes,x)&&props.id===props.indexes.id){
 			names.push(<p key={x} onClick={(event)=>props.change(event.shiftKey,event.ctrlKey,x,props.id)} className="selected" >{props.listNames[x]}</p>);
 		}else{
 			names.push(<p key={x} onClick={(event)=>props.change(event.shiftKey,event.ctrlKey,x,props.id)}>{props.listNames[x]}</p>);
@@ -21,8 +19,8 @@ const Names=(props)=>{
 	}
 
 	return (<div className="names">
-		{names}
-	</div>);
+				    {names}
+				  </div>);
 }
 
 export default Names;
